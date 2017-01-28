@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Exercises {
@@ -7,7 +8,7 @@ public class Exercises {
 	/*
 	 * Dictionary/Map Exercises
 	 */
-	
+
 	/*
 	 * Given the name of an animal, return the name of a group of that animal
 	 * (e.g. "Elephant" -> "Herd", "Rhino" - "Crash").  
@@ -34,7 +35,29 @@ public class Exercises {
 	 * 
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		Map<String,String> groupNames = new HashMap<String, String>();	
+		groupNames.put("rhino", "Crash");
+		groupNames.put("giraffe","Tower"); 
+		groupNames.put("elephant", "Herd"); 
+		groupNames.put("lion", "Pride"); 
+		groupNames.put("crow", "Murder");
+		groupNames.put("pigeon", "Kit"); 
+		groupNames.put("flamingo", "Pat");
+		groupNames.put("deer", "Herd");
+		groupNames.put("dog", "Pack"); 
+		groupNames.put("crocodile", "Float");
+
+		if(animalName == null || animalName.isEmpty()) {
+			return "unknown";
+		} else {
+			String lowercaseName = animalName.toLowerCase();
+
+			if(groupNames.containsKey(lowercaseName)) {
+				return groupNames.get(lowercaseName);
+			} else {
+				return "unknown";
+			}
+		}
 	}
 
 	/*
@@ -60,9 +83,29 @@ public class Exercises {
 	 * 
 	 */
 	public Double isItOnSale(String itemNumber) {
-		return null;
-	}
-	
+		Map<String, Double> discountPercentage = new HashMap <String, Double>();
+
+		discountPercentage.put("kitchen4001", 0.20);
+		discountPercentage.put("garage1070", 0.15);
+		discountPercentage.put("livingroom", 0.10);
+		discountPercentage.put("kitchen6073", 0.40);
+		discountPercentage.put("bedroom3434", 0.60);
+		discountPercentage.put("bath0073", 0.15);
+
+		if(itemNumber == null || itemNumber.isEmpty()) {
+			return 0.00;
+		} else {
+			String lowercaseItem = itemNumber.toLowerCase();
+			if(discountPercentage.containsKey(lowercaseItem)) {
+				return discountPercentage.get(lowercaseItem);	
+			} else {
+				return 0.00;
+			}
+
+		}
+	}	
+
+
 	/*
 	 * Modify and return the given map as follows: if "Peter" has more than 0 money, transfer half of it to "Paul",
 	 * but only if Paul has less than $10s.
@@ -74,10 +117,20 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		Integer peterMoney = peterPaul.get("Peter");
+		Integer paulMoney = peterPaul.get("Paul");
+		if(paulMoney < 1000 && peterMoney > 0) {
+			Integer halfOfPeterMoney = peterMoney / 2;
+			peterMoney -= halfOfPeterMoney;
+			paulMoney += halfOfPeterMoney;
+
+			peterPaul.put("Peter", peterMoney);
+			peterPaul.put("Paul", paulMoney);
+		}
+		return peterPaul;
 	}
-	
-    /*
+
+	/*
 	 * Modify and return the given map as follows: if "Peter" has $50 or more, AND "Paul" has $100 or more,
 	 * then create a new "PeterPaulPartnership" worth a combined contribution of a quarter of each partner's
 	 * current worth.
@@ -87,9 +140,21 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+
+		Integer peterMoney = peterPaul.get("Peter");
+		Integer paulMoney = peterPaul.get("Paul");
+		if (peterMoney >= 5000 && paulMoney >= 10000) {
+			Integer peterpaulMoney = (peterMoney / 4) + (paulMoney / 4);
+			peterMoney -= peterMoney/4;
+			paulMoney -= paulMoney/4;
+			peterPaul.put("Peter", peterMoney);
+			peterPaul.put("Paul", paulMoney);
+			peterPaul.put("PeterPaulPartnership", peterpaulMoney);
+		}
+		return peterPaul;
 	}
-	
+
+
 	/*
 	 * Given an array of non-empty strings, return a Map<String, String> where for every different string in the array, 
 	 * there is a key of its first character with the value of its last character.
@@ -99,9 +164,16 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String,String> result = new HashMap<String, String>();	
+		for(int i=0; i < words.length; i++) {
+			String word = words[i];
+			String first = word.substring(0, 1);
+			String last = word.substring(word.length() -1);
+			result.put(first, last);
+		}
+		return result;
 	}
-	
+
 	/*
 	 * Given an array of strings, return a Map<String, Integer> with a key for each different string, with the value the 
 	 * number of times that string appears in the array.
@@ -113,10 +185,23 @@ public class Exercises {
 	 * wordCount(["c", "b", "a"]) → {"b": 1, "c": 1, "a": 1}
 	 * 
 	 */
+
+	/////////////REVIEW THIS//////////////////////////////
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		Map<String, Integer> result = new HashMap<String, Integer>();
+		for(int i = 0; i < words.length; i++) {
+			String currentWord = words[i];
+			if( result.containsKey(words[i])) {
+				int valueOfCurrentWord = result.get(currentWord);
+				valueOfCurrentWord ++;
+				result.put(currentWord, valueOfCurrentWord);
+			} else{
+				result.put(currentWord, 1);
+			}
+		}
+		return result;
 	}
-	
+
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the 
 	 * number of times that int appears in the array.
@@ -129,9 +214,23 @@ public class Exercises {
 	 * 
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
-	}
-	
+		//////////////////////REVIEW THIS////////////////////////////
+		Map<Integer, Integer> result = new HashMap<Integer, Integer>();
+		for(int i = 0; i < ints.length; i++) {
+			int currentKey = ints[i];
+			if(result.containsKey(currentKey)) {
+				int counter = result.get(currentKey);
+				counter++;
+				result.put(currentKey, counter);
+			} else {
+				result.put(currentKey, 1);
+			}
+		} 
+		return result;
+	}	
+
+
+
 	/*
 	 * Given an array of strings, return a Map<String, Boolean> where each different string is a key and value
 	 * is true only if that string appears 2 or more times in the array.
@@ -142,9 +241,20 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+
+		Map<String, Boolean> result = new HashMap<String, Boolean>();
+		for(int i = 0; i < words.length; i++) {
+			String currentKey = words[i];
+			if(result.containsKey(currentKey)) {
+				result.put(currentKey, true);
+			} else {
+				result.put(currentKey, false);
+			}  
+		} return result;
 	}
-	
+
+
+
 	/*
 	 * Given two maps, Map<String, Integer>, merge the two into a new map, Map<String, Integer> where keys in Map2, 
 	 * and their Integer values, are added to the Integer values of matching keys in Map1. Return the new map.
