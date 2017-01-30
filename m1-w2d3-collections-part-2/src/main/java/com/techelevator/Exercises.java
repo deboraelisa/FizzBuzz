@@ -2,6 +2,7 @@ package com.techelevator;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Exercises {
 
@@ -266,8 +267,23 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
-		return null;
+		Map<String, Integer> result = new HashMap<String, Integer>();
+	    	int quantity;
+			for(String consolidatedSku : mainWarehouse.keySet()) {
+	    		quantity = mainWarehouse.get(consolidatedSku);
+	    		result.put(consolidatedSku, quantity);	}
+	    	for(String remoteSku : remoteWarehouse.keySet()) {
+	    		quantity = remoteWarehouse.get(remoteSku);
+	    		if(result.containsKey(remoteSku)) {
+	    			quantity = quantity + result.get(remoteSku);
+	    			result.put(remoteSku, quantity);
+	    		} else {
+	    			result.put(remoteSku, quantity);
+	    		}
+	    	}
+		return result;
 	}
+	
 
 	/*
 	 * Just when you thought it was safe to get back in the water --- last2Revisited!!!!
@@ -285,6 +301,17 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> last2Revisted(String[] words) {
-		return null;
+		Map<String, Integer> result = new HashMap<String, Integer>();
+		for(int i = 0; i < words.length; i++) {
+			String lastTwo = words[i].substring(words[i].length() - 2, words[i].length());
+			int counter = 0;
+			for(int j = 0; j < words[i].length(); j++) {
+				if(words[i].indexOf(lastTwo, j) == j) {
+					counter++;
+				}
+				result.put(words[i], counter - 1);
+			}
+		}
+		return result;
 	}
 }
