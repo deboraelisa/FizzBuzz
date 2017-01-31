@@ -27,4 +27,47 @@ public class Person {
 	// Write your code below
 	//
 
+	private String firstName;
+	private String lastName;
+	private String fullName;
+	private int age;
+	private boolean adult;
+	
+	public Person() {
+	}
+	
+	public String getFullName() {
+		fullName = firstName + " " + lastName;
+		return fullName;
+	}
+	
+	public boolean isAdult() {
+		if( age < 18) {
+			adult = false;
+		} else {
+			adult = true;
+		}
+		return adult;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setAge(int age) {
+		if(age < 0) {
+			System.out.println("Age cannot be less than 0.");
+		} else {
+		this.age = age;
+		}
+		}
+	
+	
+	
 }
