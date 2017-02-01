@@ -169,7 +169,7 @@ The following are descriptions of several everyday items that you need to implem
 <br/>
 
     
-The select three of the following, and create a class for them.  Make sure to include both attributes, and methods that not only do things, but change the object's state.
+The select three of the following, and create a class for them.  Make sure to include both attributes and methods that not only do things, but change the object's state.
 
     Cowgirl                                 Broom
     
