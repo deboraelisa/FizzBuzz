@@ -13,10 +13,13 @@ public class SmartPhone {
      * @param phoneNumber
      * @param carrier
      */
-    public SmartPhone(String phoneNumber, String carrier)
-    {
-        this.phoneNumber = phoneNumber;
-        this.carrier = carrier;
+    public SmartPhone(String phoneNumber, String carrier){
+    	if(phoneNumber.length() == 10 && phoneNumber!= null && !phoneNumber.isEmpty()){
+    		this.phoneNumber = phoneNumber;
+    	}
+    	if(carrier!= null && !carrier.isEmpty()){
+    		this.carrier = carrier;
+    	}
     }
 
     /**
@@ -24,8 +27,9 @@ public class SmartPhone {
      * @return phoneNumber
      */
     public String getPhoneNumber() {
-        return phoneNumber;            
+       return phoneNumber;
     }
+
 
     /**
      * Phone carrier
@@ -64,7 +68,7 @@ public class SmartPhone {
      * @return onCall
      */
     public boolean isOnCall() {
-        return onCall;            
+        return true;            
     }
 
     /**
@@ -74,35 +78,40 @@ public class SmartPhone {
      * @return True if the call could be placed, false otherwise
      */
     public boolean Call(String phoneNumberToCall, int numberOfMinutesToTalk)
-    {                        
+    {   if(phoneNumberToCall.length() == 10 && phoneNumberToCall != null && !phoneNumberToCall.isEmpty() && numberOfMinutesToTalk <= 100) {                   
         onCall = true;
         batteryCharge -= numberOfMinutesToTalk;
-
         return true;
+    } 
+    	return false;
     }
 
     /**
      * Answer the phone. OnCall will be set to true. Battery juice is free when you answer the phone 
      */
-    public void AnswerPhone()
+    public boolean AnswerPhone()
     {
         onCall = true;
+        return true;
     }
 
     /**
      * Hangs up the phone. OnCall will be set to false. 
      */
-    public void HangUp()
+    public boolean HangUp()
     {
         onCall = !onCall;
+        return true;
     }
 
     /**
      * Recharges the battery from wherever it is at back to 100 
      */
-    public void RechargeBattery()
+    public int RechargeBattery()
     {
         batteryCharge = 95;
+        return batteryCharge;
     }
+   
 
 }

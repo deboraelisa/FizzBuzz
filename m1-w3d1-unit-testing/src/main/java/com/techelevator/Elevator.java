@@ -26,7 +26,11 @@ public class Elevator {
     public int getShaftNumber() {
         return shaftNumber;
     }
-
+    
+    public void setShaftNumber(int shaftNumber) {
+		this.shaftNumber = shaftNumber;
+	}
+    
     /**
      * Current elevator level 
      * @return currentLevel
@@ -35,7 +39,9 @@ public class Elevator {
         return currentLevel;
     }
 
-    /**
+    
+
+	/**
      * Number of levels available for elevator. 
      * @return numberOfLevels
      */

@@ -7,7 +7,7 @@ public class Airplane {
     private int bookedFirstClassSeats = 0;
     private int totalCoachSeats;
     private int bookedCoachSeats = 0;
-
+    
     /**
      * Creates a new airplane 
      * @param totalFirstClassSeats Total number of first class seats that can be booked
@@ -15,7 +15,7 @@ public class Airplane {
      */
     public Airplane(int totalFirstClassSeats, int totalCoachSeats) {
         this.totalFirstClassSeats = totalFirstClassSeats;
-        this.totalCoachSeats = totalCoachSeats;            
+        this.totalCoachSeats = totalCoachSeats;             
     }
 
     /**
@@ -23,8 +23,10 @@ public class Airplane {
      * @return planeNumber
      */
     public String getPlaneNumber() {
-        return planeNumber;            
-    }
+  //      if(planeNumber.length() == 6 && planeNumber != null && !planeNumber.isEmpty()){
+    	return planeNumber;      
+        } 
+
 
     /**
      * Number of already booked first class seats 
@@ -39,7 +41,7 @@ public class Airplane {
      * @return availableFirstClassSeats
      */
     public int getAvailableFirstClassSeats() {
-        return bookedFirstClassSeats;
+    	return bookedFirstClassSeats;
     }
 
     /**
@@ -63,7 +65,7 @@ public class Airplane {
      * @return availableCoachSeats
      */
     public int getAvailableCoachSeats() {
-        return totalCoachSeats;
+    	return totalCoachSeats;
     }
 
     /**
@@ -75,8 +77,10 @@ public class Airplane {
     }
 
     /**
-     * Reserves a first class or coach seat. Algorithm checks for reservation possiblity before making reservation. 
-     * @param firstClass True if the reservation is for first class, false for coach
+     * Reserves a first class or coach seat. Algorithm checks for 
+     * reservation possiblity before making reservation. 
+     * @param firstClass True if the reservation is for first class, 
+     * false for coach
      * @param totalNumberOfSeats Total number of seats to reserve
      * @return True if reservation was successful, false otherwise
      */
