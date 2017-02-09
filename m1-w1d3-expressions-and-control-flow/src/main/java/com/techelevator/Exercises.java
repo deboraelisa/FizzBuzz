@@ -152,7 +152,6 @@ public class Exercises {
 			return true;
 		}
 		return false;
-	
 	}
 	
 	//return (n%3==0 || n%5==0);
@@ -244,8 +243,8 @@ public class Exercises {
 					if((a >= 40 && a <= 50) && (b >= 40 && b <= 50)) {
 					return true;
 				}
-		return false;
-	}
+				return false;
+				}
 	}
 	/*
 	 15. Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, 
@@ -337,9 +336,9 @@ public class Exercises {
 		if (isSummer) {
 			if(summerSquirrelPlaying) {
 			return true;
-				} else {
-					return false;
-				}
+			} else {
+				return false;
+			}
 		} else {
 			if(squirrelPlayingTemperature) {
 				return true;
@@ -375,7 +374,7 @@ public class Exercises {
 			if(speed >= 61 && speed <= 80) {
 				return smallTicket;
 			} else {
-				if(speed >= 80){
+				if(speed >= 80) {
 					return bigTicket;
 				}
 				if(speed <= 60) {
@@ -486,8 +485,8 @@ public class Exercises {
 	public boolean old35(int n) {
    /* if((n % 3) == 0 || (n % 5) == 0) {
 			return true;
-		}
-		return false;
+	  }
+	  return false;
 	}*/
 	return (n%3==0 ^ n%5==0); 
 	}
