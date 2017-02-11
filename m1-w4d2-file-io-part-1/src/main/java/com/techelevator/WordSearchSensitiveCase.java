@@ -5,26 +5,35 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class WordSearch {
+public class WordSearchSensitiveCase {
 
-	
+	static boolean caseSensitive = true;
 	public static void main(String[] args) {
 		try(Scanner userInput = new Scanner(System.in)) {
 			System.out.print("Enter search term >>> ");
 			String searchTerm = userInput.nextLine();
-
-			System.out.print("Enter File Path >>>");
-			String filePath = userInput.nextLine();
-//			Do you want the search to be case sensitive? (y or n) >>> n	
+			String adjustedSearchTerm = searchTerm;
+			String adjustedLine = "";
 			
+			System.out.print("Enter File Path >>> ");
+			String filePath = userInput.nextLine();
+			System.out.print("Do you want the search to be case sensitive? (y or n) >>> ");
+			String userCase = userInput.nextLine();
+			if(userCase.equals("n")){
+				caseSensitive = false;
+				adjustedSearchTerm = adjustedSearchTerm.toLowerCase();
+			}
 			try {
 				File searchFile = getSearchFile(filePath);
 				try(Scanner fileInput = new Scanner(searchFile)) {
 					int lineNumber = 1;
 					while(fileInput.hasNextLine()) {
 						String line = fileInput.nextLine();
-						
-						if(line.contains(searchTerm)) {
+						adjustedLine = line;
+						if(caseSensitive == false) {
+							adjustedLine = adjustedLine.toLowerCase();
+						}
+						if(adjustedLine.contains(adjustedSearchTerm)) {
 							System.out.println(lineNumber + ")"+ line);
 						}
 						lineNumber ++;
