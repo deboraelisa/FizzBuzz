@@ -2,27 +2,68 @@
 
 -- 1. All of the films that Nick Stallone has appeared in
 --    Rows: 30
+select film.title, actor.first_name, actor.last_name from film
+JOIN film_actor ON film_actor.film_id = film.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+where actor.first_name = 'NICK' and actor.last_name = 'STALLONE'
 
 -- 2. All of the films that Rita Reynolds has appeared in
 --    Rows: 20
+select film.title, actor.first_name, actor.last_name from actor
+join film_actor on actor.actor_id = film_actor.actor_id
+join film on film_actor.film_id = film.film_id
+where actor.first_name = 'RITA' and actor.last_name = 'REYNOLDS'
 
 -- 3. All of the films that Judy Dean or River Dean have appeared in
 --    Rows: 46
+select film.title, actor.first_name, actor.last_name from film
+JOIN film_actor ON film_actor.film_id = film.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+where (actor.first_name = 'JUDY' and actor.last_name = 'DEAN') or (actor.first_name = 'RIVER' and actor.last_name = 'DEAN')
+
 
 -- 4. All of the the ‘Documentary’ films
 --    Rows: 68
+SELECT film.title, category.name 
+FROM film 
+JOIN film_category ON film.film_id=film_category.film_id 
+JOIN category ON category.category_id=film_category.category_id 
+WHERE category.name='Documentary' 
+ORDER BY film.title;
+
 
 -- 5. All of the ‘Comedy’ films
 --    Rows: 58
+SELECT film.title, category.name 
+FROM film 
+JOIN film_category ON film.film_id=film_category.film_id 
+JOIN category ON category.category_id=film_category.category_id 
+WHERE category.name='Comedy' 
+ORDER BY film.title;
 
 -- 6. All of the ‘Children’ films that are rated ‘G’
 --    Rows: 10 
+select film.title, category.name 
+from film
+JOIN film_category ON film.film_id = film_category.film_id 
+JOIN category ON category.category_id  = film_category.category_id
+where film.rating = 'G' and category.name= 'Children'
 
 -- 7. All of the ‘Family’ films that are rated ‘G’ and are less than 2 hours in length
 --    Rows: 3
+select film.title, category.name 
+from film
+JOIN film_category ON film.film_id = film_category.film_id 
+JOIN category ON category.category_id  = film_category.category_id
+where film.rating = 'G' and category.name= 'Family' and length < 120
 
 -- 8. All of the films featuring actor Matthew Leigh that are rated ‘G’
 --    Rows: 9
+select film.title, actor.first_name, actor.last_name from film
+JOIN film_actor ON film_actor.film_id = film.film_id
+JOIN actor ON actor.actor_id = film_actor.actor_id
+where actor.first_name = 'Matthew' and actor.last_name = 'Leigh'
+
 
 -- 9. All of the ‘Sci-Fi’ films released in 2006
 --    Rows: 61
