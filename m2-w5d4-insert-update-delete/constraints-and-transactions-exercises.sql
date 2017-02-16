@@ -1,7 +1,15 @@
--- Write queries to return the following:
+-- Write queries to return the following: dvdstore database
 -- The following changes are applied to the "pagila" database.**
 
 -- 1. Add actors, Hampton Avenue, and Lisa Byway to the actor table.
+insert into actor(first_name, last_name) values ( 'HAMPTON', 'AVENUE');
+insert into actor(first_name, last_name) values ( 'LISA', 'BYWAY');
+
+select * from actor
+where first_name = 'LISA' and last_name = 'BYWAY';
+
+select * from actor
+where first_name = 'HAMPTON' and last_name = 'AVENUE';
 
 -- 2. Add "Euclidean PI", "The epic story of Euclid as a pizza delivery boy in 
 -- ancient Greece", to the film table. The movie was released in 2008 in English. 
