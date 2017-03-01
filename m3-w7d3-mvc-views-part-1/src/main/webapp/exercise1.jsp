@@ -2,31 +2,31 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Exercise 1 - FizzBuzz</title>
-		<style>
-			li {
-				list-style-type: none;
-			}
-			
-			.fizz {
-				color: blue;
-			}
-			
-			.buzz {
-				color: red;
-			}
-			
-			.fizzbuzz {
-				color: purple;
-				font-size: 150%;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Exercise 1 - FizzBuzz</h1>
-		<ul>
-			<%--
+<head>
+<title>Exercise 1 - FizzBuzz</title>
+<style>
+li {
+	list-style-type: none;
+}
+
+.fizz {
+	color: blue;
+}
+
+.buzz {
+	color: red;
+}
+
+.fizzbuzz {
+	color: purple;
+	font-size: 150%;
+}
+</style>
+</head>
+<body>
+	<h1>Exercise 1 - FizzBuzz</h1>
+	<ul>
+		<%--
 				Add a list item (i.e. <li>) containing each of the numbers from 1 to 100.
 				
 				if the number is divisible by 3, show "Fizz!" instead and style the item using the "fizz" class
@@ -37,6 +37,32 @@
 				
 				see exercise1-fizzbuzz.png for example output
 			 --%>
-		</ul>
-	</body>
+
+		<c:set var="number" value="${param.number}"></c:set>
+
+		<c:if test="${empty number}">
+			<c:set var="number" value="100"></c:set>
+		</c:if>
+
+		<c:forEach begin="1" end="${number}" var="index">
+			<c:choose>
+				<c:when test="${index %3 == 0 && index % 5 == 0}">
+					<li class="fizzbuzz">FIZZBUZZ!</li>
+				</c:when>
+
+				<c:when test="${index % 3 == 0}">
+					<li class="fizz">Fizz!</li>
+				</c:when>
+
+				<c:when test="${index % 5 == 0}">
+					<li class="buzz">Buzz!</li>
+				</c:when>
+
+				<c:otherwise>
+					<li>${index}</li>
+				</c:otherwise>
+			</c:choose>
+		</c:forEach>
+	</ul>
+</body>
 </html>
