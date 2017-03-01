@@ -7,6 +7,10 @@ html {
 	width: 50px;
 	height: 50px;
 	padding: 20px;
+	display: inline-block;
+	text-align: center;
+	float: left;
+	font-size: 175%;
 }
 
 .odd {

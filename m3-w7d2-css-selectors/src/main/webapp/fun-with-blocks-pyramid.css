@@ -1,0 +1,77 @@
+html {
+	font: 30px Courier;
+	color: white;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	padding: 20px;
+	font-size: 175%;
+}
+
+.odd {
+	background-color: #ee3e64;
+}
+
+.even {
+	background-color: #44accf;
+}
+
+#box_0 {
+	position: relative;
+	left: 400px;
+}
+
+#box_1 {
+	position: relative;
+	left: 355px;
+}
+
+#box_2 {
+	position: relative;
+	left: 445px;
+	bottom: 90px;
+}
+
+#box_3 {
+	position: relative;
+	left: 310px;
+	bottom: 90px;
+}
+
+#box_4 {
+	position: relative;
+	left: 400px;
+	bottom: 180px;
+}
+
+#box_5 {
+	position: relative;
+	left: 490px;
+	bottom: 270px;
+}
+
+#box_6 {
+	position: relative;
+	left: 265px;
+	bottom: 270px;
+}
+
+#box_7 {
+	position: relative;
+	left: 355px;
+	bottom: 360px;
+}
+
+#box_8 {
+	position: relative;
+	left: 445px;
+	bottom: 450px;
+}
+
+#box_9 {
+	position: relative;
+	left: 535px;
+	bottom: 540px;
+}
