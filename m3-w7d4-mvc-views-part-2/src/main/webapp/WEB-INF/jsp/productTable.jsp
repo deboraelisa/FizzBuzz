@@ -1,28 +1,106 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html>
+<jsp:include page="header.jsp">
+	<jsp:param name="title" value="ProductTable View" />
+	<jsp:param name="currentPage" value="productTable" />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Product Table View</title>
-    <link rel="stylesheet" href="css/site.css" />
-</head>
-<body>
-    <header>
-        <h1>MVC Exercises - Views Part 2: Models</h1>        
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-        </ul>
-        
-    </nav>
-    <section id="main-content">
+</jsp:include>
 
-       
+<div id="top_title_table">
+	<c:out value="Toy Department" />
+</div>
 
-    </section>
-</body>
-</html>
+<table>
+	<tr>
+		<th class="th"></th>
+
+		<c:forEach var="product" items="${productList}">
+
+			<c:url var="detailUrl" value="/detailView">
+				<c:param name="productId" value="${product.productId}" />
+			</c:url>
+			<td class="row_image"><a href="${detailUrl}"><img width="80"
+					src="img/<c:out value="${product.imageName}"/>"></a></td>
+
+		</c:forEach>
+	</tr>
+
+	<tr>
+		<th class="th"></th>
+
+		<c:forEach var="product" items="${productList}">
+			<td id="best_seller_row"><c:if test="${product.topSeller}">
+					<c:out value="BEST SELLER!" />
+				</c:if></td>
+		</c:forEach>
+	</tr>
+
+	<tr>
+		<th class="th" id="name">Name</th>
+
+		<c:forEach var="product" items="${productList}">
+			<td id="name_row"><c:out value="${product.name}" /></td>
+		</c:forEach>
+	</tr>
+
+
+
+	<tr class="ratingRow">
+		<th class="th" id="ratingTable">Rating</th>
+		<c:forEach var="product" items="${productList}">
+			<td><c:choose>
+					<c:when test="${product.averageRating == 5}">
+						<img class="ratingRow" src="img/5-star.png">
+					</c:when>
+					<c:when test="${product.averageRating >4}">
+						<img class="ratingRow" src="img/4-star.png">
+					</c:when>
+					<c:when test="${product.averageRating >3}">
+						<img class="ratingRow" src="img/3-star.png">
+					</c:when>
+					<c:when test="${product.averageRating >2}">
+						<img class="ratingRow" src="img/2-star.png">
+					</c:when>
+					<c:otherwise>
+						<img class="ratingRow" src="img/1-star.png">
+					</c:otherwise>
+				</c:choose></td>
+		</c:forEach>
+	</tr>
+
+	<tr>
+		<th class="th" id="manufacturer">Mfr</th>
+
+		<c:forEach var="product" items="${productList}">
+			<td id="manufacturer_row"><c:out value="${product.manufacturer}" /></td>
+		</c:forEach>
+	</tr>
+
+	<tr>
+		<th class="th" id="price">Price</th>
+
+		<c:forEach var="product" items="${productList}">
+			<td id="price_row"><c:out value="$${product.price}" /></td>
+		</c:forEach>
+	</tr>
+
+	<tr>
+		<th class="th" id="weight">wt. (in lbs)</th>
+
+		<c:forEach var="product" items="${productList}">
+			<td id="weight_row"><c:out value="${product.weightInLbs}" /></td>
+		</c:forEach>
+	</tr>
+
+</table>
+
+
+
+<jsp:include page="footer.jsp" />
+
+
+
+
+
+
+

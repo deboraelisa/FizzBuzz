@@ -14,7 +14,7 @@ public class ProductController {
 	@RequestMapping("/productList")
 	public String showProductList(HttpServletRequest request) {
 		request.setAttribute("productList", getProducts());
-		return "productList";
+		return "productList"; //returns logical view name
 	}
 	
 	@RequestMapping("/productTiles")
