@@ -14,7 +14,7 @@
 <div id="container" class="columns">
 	<c:forEach var="product" items="${productList}">
 		<div class="box">
-			<c:url var="detailUrl" value="/detailView">
+			<c:url var="detailUrl" value="/productDetail">
 				<c:param name="productId" value="${product.productId}" />
 			</c:url>
 			<a href="${detailUrl}"><img class="tiles_image"

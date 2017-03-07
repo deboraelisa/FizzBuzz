@@ -1,16 +1,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="header.jsp">
-	<jsp:param name="DetailView" value="title" />
-	<jsp:param name="currentPage" value="detailView" />
+	<jsp:param name="ProductDetail View" value="title" />
+	<jsp:param name="currentPage" value="productDetail" />
 
 </jsp:include>
 
 <div class="toy_image_detail">
-	<img id="pic_detail" src="img/<c:out value="${product.productId}"/>">
+	<img id="pic_detail" src="img/<c:out value="${product.imageName}"/>">
 </div>
 
-
 <div class="toy_info_detail">
+
+<div class="toy_detail">
 	<c:out value="${product.name}" />
 </div>
 
@@ -59,7 +60,7 @@
 <div class="description_detail">
 	<c:out value="${product.description} lbs" />
 </div>
-
+</div>
 
 
 <jsp:include page="footer.jsp" />

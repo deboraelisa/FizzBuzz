@@ -16,7 +16,7 @@
 
 		<c:forEach var="product" items="${productList}">
 
-			<c:url var="detailUrl" value="/detailView">
+			<c:url var="detailUrl" value="/productDetail">
 				<c:param name="productId" value="${product.productId}" />
 			</c:url>
 			<td class="row_image"><a href="${detailUrl}"><img width="80"

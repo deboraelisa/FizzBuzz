@@ -177,3 +177,14 @@ column-width: 30%;
 .box {
 margin-bottom: 20px;
 }
+
+.toy_image_detail{
+	size: 80%;
+	webkit:box;
+	display:block;
+	float:left;
+}
+
+.toy_info_detail{
+	display:block;
+}

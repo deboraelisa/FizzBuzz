@@ -14,12 +14,12 @@
 
 <c:forEach var="product" items="${productList}">
 	<div class="toy_image_descrition">
-		<c:url var="detailUrl" value="/detailView">
+		<c:url var="detailUrl" value="/productDetail">
 			<c:param name="productId" value="${product.productId}" />
 		</c:url>
 
 		<div class="toy_image_list">
-			<a href="${detailtUrl}"><img
+			<a href="${detailUrl}"><img
 				src="img/<c:out value="${product.imageName}"/>"></a>
 		</div>
 
