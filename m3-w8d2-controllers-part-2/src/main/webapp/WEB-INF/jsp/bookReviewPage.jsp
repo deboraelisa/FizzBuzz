@@ -21,14 +21,14 @@
 
 		</div>
 		<div>
-			<label for="reviewTitle">Review Title</label> <input
-				type="text" id="reviewTitle" name="reviewTitle" />
+			<label for="title">Review Title</label> <input
+				type="text" id="title" name="title" />
 
 		</div>
 		
 		<div>
-			<label for="reviewText">Review Text</label> <input
-				type="text" id="reviewText" name="reviewText" />
+			<label for="text">Review Text</label> <input
+				type="text" id="text" name="text" />
 
 		</div>
 		
