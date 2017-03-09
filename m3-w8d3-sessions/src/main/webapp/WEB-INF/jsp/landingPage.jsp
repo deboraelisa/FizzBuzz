@@ -7,7 +7,7 @@
 <title>Favorite Things</title>
 </head>
 <body>
- <h2> Tell us about your favority things</h2>
+ <h2> Tell us about your favorite things</h2>
  <c:url var="startSurveyUrl" value='/favsPage1'/>
  <a href="${startSurveyUrl}">Take our survey</a>
 </body>

@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 public class DeliveryCostComparison {
 	public static void main(String[] args){
-//		Rate driver = new Rate();
+
 		List<DeliveryDriver> rate = new ArrayList<DeliveryDriver>();
+		
 		DeliveryDriver firstClass = new PostalServiceFirstClass();
 		DeliveryDriver secondClass = new PostalServiceSecondClass();
 		DeliveryDriver thirdClass = new PostalServiceThirdClass();
@@ -26,7 +27,7 @@ public class DeliveryCostComparison {
 		rate.add(spuNextDay);
 
 		Scanner input = new Scanner(System.in);
-
+		
 		System.out.println("Please enter the weight of the package:");
 		int weight = input.nextInt();
 		input.nextLine();
@@ -53,22 +54,17 @@ public class DeliveryCostComparison {
 		deliveryOptions[6] = "SPU (next-day)";
 		}
 		
-		System.out.println("Delivery Method $ Cost");
+		System.out.println("Delivery Method" + "\t\t\t" + "$ Cost");
+		System.out.println("--------------------------------------");
 		
 		
-		
-	//	DeliveryDriver driver = new DeliveryDriver();
 		for(int i = 0; i < 7; i++) {
-			System.out.print(Arrays.toString(deliveryOptions));
-			for(int j=0; j<rate.size();j++){
-			    System.out.println(rate.get(j));
-			System.out.print(rate);
+			System.out.print(deliveryOptions[i]);
+			System.out.print("\t" + "$");
+			System.out.printf("%.2f",rate.get(i).calculateRate(weight, distance));
+			System.out.println();
 			
-			//			double rate;
-//			for( rate : rates) {
-//			System.out.println(DeliveryDriver);
 		}	
-	}
 	}
 	}
 	

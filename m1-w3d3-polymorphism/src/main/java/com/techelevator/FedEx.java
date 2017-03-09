@@ -3,13 +3,14 @@ package com.techelevator;
 public class FedEx implements DeliveryDriver{
 	
 	@Override
-	public double calculateRate(double distance, int weight) {
-		double rate = 0;
+	public double calculateRate(double weight, int distance) {
+		double rate = 20.0;
 		if(weight > 48) {
-			rate = rate +3.00;
-		}if(distance > 500) {
-			rate = rate + 5.00;
+			rate = rate + 3.00;
 		}
+		if(distance > 500) {
+			rate = rate + 5.00;
+		} 
 		return rate;
 	} 	
 }
