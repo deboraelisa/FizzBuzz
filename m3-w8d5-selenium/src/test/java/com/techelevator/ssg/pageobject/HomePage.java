@@ -22,6 +22,12 @@ public class HomePage {
 			WebElement link = webDriver.findElement(By.linkText("Alien Age"));
 			link.click();
 			return new AgeCalculatorInputPage(webDriver);
+	}
+		
+		public DriveTimeCalculatorInputPage clickDriveTimeCalculatorLink(){
+			WebElement link = webDriver.findElement(By.linkText("Drive Time"));
+			link.click();
+			return new DriveTimeCalculatorInputPage(webDriver);
 		
 	
 	}
