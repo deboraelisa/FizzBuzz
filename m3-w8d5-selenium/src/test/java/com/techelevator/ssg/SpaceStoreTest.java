@@ -9,13 +9,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.techelevator.ssg.pageobject.HomePage;
-import com.techelevator.ssg.pageobject.WeightCalculatorInputPage;
-import com.techelevator.ssg.pageobject.WeightCalculatorResultsPage;
+import com.techelevator.ssg.pageobject.SpaceForum;
+import com.techelevator.ssg.pageobject.SpaceForumInputPage;
+import com.techelevator.ssg.pageobject.SpaceStore;
+import com.techelevator.ssg.pageobject.SpaceStoreInputPage;
 
-public class HomePageTest {
+public class SpaceStoreTest {
 
 	private static WebDriver webDriver;
 	private HomePage homePage;
+	private SpaceStore spaceStore;
 
 	@BeforeClass
 	public static void createWebDriver(){
@@ -32,19 +35,18 @@ public class HomePageTest {
 	}
 	
 	@AfterClass
-	public static void closeWebDriver(){
+	public static void closeWebDriver() {
 		webDriver.close();
 	}
 	
 	@Test
-	public void test_home_page_link_exist(){
-		WeightCalculatorInputPage weightInput = homePage.clickWeightCalculatorLink();
-		weightInput.selectPlanet("Mercury");
-		weightInput.inputWeight("100");
-		
-		WeightCalculatorResultsPage result = weightInput.submit();
-		Assert.assertTrue(result.verifyWeight("37.0"));
+	public void test_space_store(){
+		SpaceStore spaceStore = homePage.clickSpaceStoreLink();
+		SpaceStoreInputPage inputPage = spaceStore.selectItemToPurchase("1");
+		inputPage.addQuantityToPurchase("2");
+		inputPage.submit();
+		Assert.assertTrue(spaceStore.verifyPurchase("2", "Coffee Mug"));
 	}
+
+	
 }
-
-
