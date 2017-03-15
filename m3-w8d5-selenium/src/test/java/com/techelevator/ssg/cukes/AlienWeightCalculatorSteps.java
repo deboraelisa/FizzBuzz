@@ -51,7 +51,7 @@ public class AlienWeightCalculatorSteps {
 	}
 	
 	@Then("^the calculated weight should be (.*) pounds$")
-	public void verifyWEight(String weight) throws Throwable {
+	public void verifyWeight(String weight) throws Throwable {
 		Assert.assertTrue(weightResult.verifyWeight(weight));
 	}
 }
