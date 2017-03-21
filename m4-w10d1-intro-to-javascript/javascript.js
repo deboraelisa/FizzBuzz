@@ -158,19 +158,23 @@ console.log(makeMiddle([1, 2, 3, 4]));  /* → [2, 3]*/
 console.log(makeMiddle([7, 1, 2, 3, 4, 9]));    /*→ [2, 3]*/
 console.log(makeMiddle([1, 2]));  /* → [1, 2]*/
 	
-	function makeMiddle(i){
+	function makeMiddle(array){
 
 		var numbersArray = [];
-			if ((numbersArray.length % 2 != 0) || numbersArray.length < 2){
-				return "";
+			if ((array.length % 2 != 0) || numbersArray.length < 2){
+				return [];
 			} else {
-
-		for(var i=0; 1 < numbersArray.lenght; i++){
-		numbersArray.push(i);
-
-		return numbersArray.length;
-		}	
+				var index = (array.length /2) - 1;
+				var newArray = array.slice(index, index + 2);
+				return newArray;
+			}
+	}
 	
+// 	var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// var citrus = fruits.slice(1, 3);
+// The result of citrus will be:
+
+// Orange,Lemon
 
 
 
@@ -397,3 +401,4 @@ console.log(blackjack(19, 22));  /*→ 19*/
 		else
 			return x;
 	}
+
