@@ -160,8 +160,7 @@ console.log(makeMiddle([1, 2]));  /* → [1, 2]*/
 	
 	function makeMiddle(array){
 
-		var numbersArray = [];
-			if ((array.length % 2 != 0) || numbersArray.length < 2){
+			if ((array.length % 2 != 0) || array.length < 2){
 				return [];
 			} else {
 				var index = (array.length /2) - 1;
@@ -169,11 +168,11 @@ console.log(makeMiddle([1, 2]));  /* → [1, 2]*/
 				return newArray;
 			}
 	}
-	
+
+//reference:	
 // 	var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 // var citrus = fruits.slice(1, 3);
 // The result of citrus will be:
-
 // Orange,Lemon
 
 
@@ -197,9 +196,9 @@ console.log(oddOnly([2, 4, 8, 32, 256]));     /*→ []*/
 // Weave Write a function that given two arrays, interleaves the two arrays one 
 //element from each array at a time to return a new array made up of the interwoven 
 //elements of the original two arrays.
-// console.log("Weave");
-// console.log(weave([1, 3, 5], [2, 4]));   /* → [1, 2, 3, 4, 5] */
-// console.log(weave([1, 3, 5], [2, 4, 6, 8]));    /*→ [1, 2, 3, 4, 5, 6, 8]*/
+console.log("Weave");
+console.log(weave([1, 3, 5], [2, 4]));   /* → [1, 2, 3, 4, 5] */
+console.log(weave([1, 3, 5], [2, 4, 6, 8]));    /*→ [1, 2, 3, 4, 5, 6, 8]*/
 
 // 	function weave(array1, array2) {
 // 		var interleaveArray = [];
@@ -226,22 +225,22 @@ console.log(oddOnly([2, 4, 8, 32, 256]));     /*→ []*/
 //        return weave;
 //     }
 
-// var combined = [];
-//     if(array1.length >= array2.length) {
-//     for (var i = 0; i < array1.length; i++) {
-//         combined.push(array1[i]);
-//         combined.push(array2[i]);
-// 	return combined;
-// 	} 
-// 	if(array2.length >= array1.length)
-// 	for (var i = 0; i < array2.length; i++) {
-//     combined.push(array1[i]);
-//     combined.push(array2[i]);
-// 	return combined;
-// }
-// }
-// return null;
-// }
+var combined = [];
+    if(array1.length >= array2.length) {
+    for (var i = 0; i < array1.length; i++) {
+        combined.push(array1[i]);
+        combined.push(array2[i]);
+	return combined;
+	} 
+	if(array2.length >= array1.length)
+	for (var i = 0; i < array2.length; i++) {
+    combined.push(array1[i]);
+    combined.push(array2[i]);
+	return combined;
+}
+}
+return null;
+}
 	
 
 
@@ -387,7 +386,7 @@ console.log("Black Jack");
 console.log(blackjack(19, 21));  /* → 21*/
 console.log(blackjack(21, 19));  /*→ 21*/
 console.log(blackjack(19, 22));  /*→ 19*/
-}
+
 
 	function blackjack(x, y){
 		if(x > 21 && y > 21)

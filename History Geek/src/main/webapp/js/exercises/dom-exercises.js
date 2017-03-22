@@ -41,6 +41,7 @@ function turnOfTheCenturyPresidents() {
 //Locate each president serving at the end of the century and add the 'endOfCentury' class.
 function endOfTheCenturyPresidents() {
 	$('#presidents > h2').prev().addClass('endOfCentury');
+	//to pass the test for current president:
 	$('#presidents > #donald-trump'). addClass('endOfCentury');
 
 }
