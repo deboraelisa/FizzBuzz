@@ -1,4 +1,3 @@
-
 ﻿//$(document).ready(function () {
 //    //modeled after toggle.js in lecture notes W11D2
 //	var socket = new SockJS('ws-connect');
@@ -141,5 +140,3 @@
 		return false;
 	});
 });
-
-
