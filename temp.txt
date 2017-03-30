@@ -1,0 +1,261 @@
+commit 43fb1edb4c635bce67bc96f370b055faef542da7
+Merge: 0445e62 ecf1d1c
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Tue Mar 28 11:57:31 2017 -0400
+
+    fixed merge conflict with websocket exercise
+
+commit 0445e62e1f7e5de11cd51f8cf8330b5f2ff7f8ad
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Tue Mar 28 11:55:46 2017 -0400
+
+    websocket exercise
+
+commit ecf1d1c52c236dac5ba8664642dae0760a6caee1
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Mar 28 11:52:49 2017 -0400
+
+    Adding what we did in class
+
+commit e680e13d7a9aae9f0d193d3b55bd28c9206dc495
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Mon Mar 27 18:43:02 2017 -0400
+
+    Bootstrap Tech Elevator page progress
+
+commit f6f68caac68e7562ac4a16768f02723ad7aa2e63
+Merge: c7298b8 fbd2814
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Mon Mar 27 10:10:07 2017 -0400
+
+    Merge branch 'master' of https://bitbucket.org/te-cbus-cohort-1/java-exercises
+
+commit fbd281413bff34b4a89fe4a79f32e0faae106862
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Mar 27 10:05:43 2017 -0400
+
+    Updating the API controller
+
+commit c7298b8b84de5b136a85720a2d89b97bb506b45d
+Merge: 35b8b9a 0bbdafc
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Fri Mar 24 10:22:55 2017 -0400
+
+    Merge branch 'master' of https://bitbucket.org/te-cbus-cohort-1/java-exercises
+
+commit 35b8b9aad6852c406c9ce53853e1bc79910302ff
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Fri Mar 24 09:03:53 2017 -0400
+
+    validation exercises
+
+commit 0bbdafc6fa515ce823ff0e0cf114ecdea85e17c8
+Merge: e399e79 6b78af8
+Author: Casey Borders <casey@techelevator.com>
+Date:   Fri Mar 24 09:01:06 2017 -0400
+
+    Merge branch 'master' of https://bitbucket.org/te-cbus-cohort-1/java-exercises
+
+commit e399e7967d76de4548332f963a2a43a843d5fd8a
+Author: Casey Borders <casey@techelevator.com>
+Date:   Fri Mar 24 09:00:43 2017 -0400
+
+    Adding bootstrap
+
+commit eea760a11cd86e6605894d79670a92fe69b9893e
+Author: Debora Lipetz <debora.lipetz@gmail.com>
+Date:   Thu Mar 23 11:19:56 2017 -0400
+
+    Fixing Casey's mistake
+
+commit 6b78af8915bf335d538671f4250fd21b51986d55
+Author: David Wintrich <david@techelevator.com>
+Date:   Wed Mar 22 21:44:57 2017 -0400
+
+    added etc directory for history geek so that README images show up
+
+commit 98d009fd40322a8e5b5a914cbb44f3930969efe1
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Mar 22 12:25:18 2017 -0400
+
+    Adding Readme
+
+commit 20af3bc9c04fc445081646da2dfc051f793bc113
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Mar 20 15:14:17 2017 -0400
+
+    Adding History Geek
+
+commit 816ba5b106ac75299df8ff332e49505230e85c35
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Mar 20 11:19:14 2017 -0400
+
+    Adding Javascript exercises
+
+commit 6d02a78d403b2a37d2efe58c66725476f3b0f28e
+Author: Casey Borders <casey@techelevator.com>
+Date:   Fri Mar 10 09:01:43 2017 -0500
+
+    Adding Selenium
+
+commit 1bf4a7fcd008e24358045c7b285d4b4b1b9a7115
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Mar 8 09:02:22 2017 -0500
+
+    Adding Sessions
+
+commit 8ff7ea7cf5ecdee2bbf66b3ff74393337fffab25
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Mar 7 09:05:39 2017 -0500
+
+    Adding Controllers part 2
+
+commit 3b51465e73e99282e8c5cc64a11ee9cb112e7ff5
+Author: Casey Borders <casey@techelevator.com>
+Date:   Thu Mar 2 11:10:08 2017 -0500
+
+    Adding Views part 2
+
+commit 01a3016ccbd303d1061045ad91e0eb85290b0fdd
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Mar 1 08:40:48 2017 -0500
+
+    Adding MVC Views Part 1
+
+commit edd857e10bb3b8f0e73e936d614ad33b516c420c
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Feb 28 08:58:49 2017 -0500
+
+    Adding css selectors
+
+commit dd23112e844d4a08ee1da9d10fab69617f5380da
+Author: Casey Borders <casey@techelevator.com>
+Date:   Fri Feb 17 10:17:55 2017 -0500
+
+    Adding database design
+
+commit 7a29a0e6c3b5dc21b7e7629a72caea37b5d1fdf0
+Author: Casey Borders <casey@techelevator.com>
+Date:   Thu Feb 16 09:00:52 2017 -0500
+
+    Adding Insert, Update and Delete
+
+commit 202977e5953cf58a597d486457595a6071589cc0
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Feb 15 08:59:14 2017 -0500
+
+    Adding keys, joins and unions
+
+commit 02643beec42a15e0d89f022db839db69d86de659
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Feb 13 16:18:30 2017 -0500
+
+    adding ordering, sorting and functions
+
+commit 6d3a27e5e06fc411f8c123fa5c2000c59c41bd0c
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Feb 13 11:47:00 2017 -0500
+
+    adding intro to sql
+
+commit 572d21ff7990466c50136c8601a8fe38f270cd15
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Feb 8 09:03:48 2017 -0500
+
+    Adding File IO Part 2
+
+commit 4cd16c4e4b60b39a6a6c7bf425e8238c16e916f4
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Feb 7 09:04:12 2017 -0500
+
+    Adding File IO part 1
+
+commit 934ddc56ba81a229bb7bd45a4ea4666f89ebbb8b
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Feb 6 10:19:25 2017 -0500
+
+    Adding tdd
+
+commit 067f047c926b175e9c37ad87a7d2d0f8f08447c8
+Author: Casey Borders <casey@techelevator.com>
+Date:   Thu Feb 2 09:13:52 2017 -0500
+
+    Adding inheritance part 2
+
+commit cc4c01f5eaf7c0fbc77b9cdd2ef22349c17366ed
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Jan 31 15:32:36 2017 -0500
+
+    Adding polymorphism
+
+commit 3024f95974dfcb216ec96e8c441a728c2c4e7e9c
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Jan 30 10:00:29 2017 -0500
+
+    Adding unit testing
+
+commit 05166701dacd2577123d410a145bd7ed6a80b24a
+Author: Casey Borders <casey@techelevator.com>
+Date:   Fri Jan 27 09:46:31 2017 -0500
+
+    Adding classses and encapsulation
+
+commit fc970c8737ee725c1ba283bcf1edead5fb09e0de
+Author: Casey Borders <casey@techelevator.com>
+Date:   Thu Jan 26 10:33:40 2017 -0500
+
+    Adding classes and encapsulation
+
+commit ef6cc25acce7f4983b5942aca5b3ffc8b0be5d10
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Jan 25 08:44:19 2017 -0500
+
+    Adding collections part 2
+
+commit d318fff0d9e586bad0ec1f4fd92bed2f1128d5aa
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Jan 24 10:23:18 2017 -0500
+
+    Adding collections part 1
+
+commit e0163185a395338ac27ed2456fa9c1f0c024e480
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Jan 23 08:50:47 2017 -0500
+
+    Adding introduction to objects
+
+commit 80195b3a7c8a4c8745e2dcf84f642d8d48db7bdc
+Author: Casey Borders <casey@techelevator.com>
+Date:   Fri Jan 20 09:10:10 2017 -0500
+
+    Adding command line exercises
+
+commit 1524c1c7526d2dfdedd8e81aeb97c123916fb971
+Author: Casey Borders <casey@techelevator.com>
+Date:   Thu Jan 19 08:56:12 2017 -0500
+
+    Adding loops and arrays
+
+commit bb1c88c67ebc2fed56dc0901773c3a41292fb53e
+Author: Casey Borders <casey@techelevator.com>
+Date:   Wed Jan 18 09:03:42 2017 -0500
+
+    Adding expressions and control flow exercises
+
+commit 33e30867fdf1e936e7c93c85807dbd82e332adda
+Author: Casey Borders <casey@techelevator.com>
+Date:   Tue Jan 17 10:58:59 2017 -0500
+
+    Adding variables and data types exercises
+
+commit eac48997c521e4871fd3c8415cade63a057f6107
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Jan 16 14:36:02 2017 -0500
+
+    Rename folder
+
+commit b54e2a5cc5d7ccf18d91d52fafb65c3c052499c9
+Author: Casey Borders <casey@techelevator.com>
+Date:   Mon Jan 16 13:03:28 2017 -0500
+
+    Adding intro to tools
