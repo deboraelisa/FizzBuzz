@@ -7,7 +7,7 @@
 <ol class="message-list">
 	<c:forEach items="${messages}" var="message">
 		<li class="message">
-			<span class="message-text">${message.text}</span>
+			<span class="message-text"><c:out value="${message.text}"/></span>
 			<time class="timeago" datetime="${message.createTime}">${message.createTime}</time>
 		</li>
 	</c:forEach>

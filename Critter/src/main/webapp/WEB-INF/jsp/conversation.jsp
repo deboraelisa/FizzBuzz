@@ -15,8 +15,8 @@
 			</c:otherwise>
 		</c:choose>
 		<li class="message ${fromto}">
-			<span class="username">${message.fromUsername}</span>
-			<span class="message-text">${message.text}</span>
+			<span class="username"><c:out value="${message.fromUsername}"/></span>
+			<span class="message-text"><c:out value="${message.text}"/></span>
 			<time class="timeago" datetime="${message.createTime}">${message.createTime}</time>
 		</li>
 	</c:forEach>

@@ -18,22 +18,24 @@ public class JDBCUserDAO implements UserDAO {
 	
 	@Override
 	public void saveUser(String userName, String password) {
-		jdbcTemplate.update("INSERT INTO app_user(user_name, password) VALUES ('"+userName+"', '"+password+"')");
+		String sql= "INSERT INTO app_user(user_name, password) VALUES (?, ?)";
+		jdbcTemplate.update(sql, userName, password);
 	}
 
 	@Override
 	public boolean searchForUsernameAndPassword(String userName, String password) {
 		String sqlSearchForUser = "SELECT * "+
 							      "FROM app_user "+
-							      "WHERE UPPER(user_name) = '"+userName.toUpperCase()+"' "+
-							      "AND password = '"+password+"'";
+							      "WHERE UPPER(user_name) = ? "+
+							      "AND password = ?";
 		
-		return jdbcTemplate.queryForRowSet(sqlSearchForUser).next();
+		return jdbcTemplate.queryForRowSet(sqlSearchForUser, userName.toUpperCase(), password).next();
 	}
 
 	@Override
 	public void updatePassword(String userName, String password) {
-		jdbcTemplate.update("UPDATE app_user SET password = '"+password+"' WHERE user_name = '"+userName+"'");
+		String sql="UPDATE app_user SET password = ? WHERE user_name = ?";
+		jdbcTemplate.update(sql, password, userName);
 	}
 
 }
