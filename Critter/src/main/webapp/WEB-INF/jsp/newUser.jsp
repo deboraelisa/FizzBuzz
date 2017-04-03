@@ -5,32 +5,51 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 	
-		$("form").validate({
+		$("#signUp").validate({
 			
 			rules : {
 				userName : {
 					required : true
 				},
 				password : {
-					required : true
+					required : true,
+					notMoreThan2: true,
+					strongPassword: true,
+ 					minlength: 10,
+					maxlength: 128,
 				},
 				confirmPassword : {
-					required : true,		
+					required : true,	
 					equalTo : "#password"  
 				}
 			},
 			messages : {			
 				confirmPassword : {
 					equalTo : "Passwords do not match"
+						
 				}
 			},
 			errorClass : "error"
 		});
 	});
+
+ 	$.validator.addMethod("strongPassword", function(value, index) {
+		return value.match(/[A-Z]/) &&
+		        value.match(/[a-z]/) &&
+				value.match(/[0-9]/) &&
+				value.match(/[!@#\$%^&\* ]/);
+		}, "Please enter at least 1 uppercase character, 1 lowercase character, 1 digit and 1 special character.");
+
+	$.validator.addMethod("notMoreThan2", function(value, index) {
+		return !value.match(/(.)\1{2}/);
+	}, "Please don't use more than 2 identical characters in a row.");
+	
+	
+
 </script>
 
 <c:url var="formAction" value="/users" />
-<form method="POST" action="${formAction}">
+<form  id="signUp" method="POST" action="${formAction}">
 	<div class="row">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
