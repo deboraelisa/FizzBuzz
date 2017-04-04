@@ -54,4 +54,10 @@ public class MessageController {
 		
 		return "redirect:/users/"+userName+"/messages";
 	}
+	
+	@RequestMapping(path="/users/{userName}/messages/delete", method=RequestMethod.POST)
+	public String deleteUserMessage(@PathVariable String userName, @RequestParam Long messageId) {
+		messageDAO.deleteUserMessage(messageId);
+		return "redirect:/users/"+userName+"/messages";
+	}
 }
