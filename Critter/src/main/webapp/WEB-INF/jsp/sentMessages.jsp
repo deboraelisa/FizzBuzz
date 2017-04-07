@@ -16,7 +16,8 @@
 			<time class="timeago" datetime="${message.createTime}">${message.createTime}</time>
 		</li>
 		<c:url var="deleteUrl" value="/users/${message.fromUsername}/messages/delete"/>
-		<form action="${deleteUrl}" method="POST">
+		<form action="${deleteUrl}" method="POST">		
+		<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
 			<input type="hidden" name="messageId" value="${message.id}">
 			<input type="submit" id="${message.id}" class="deleteButton" value="Delete this message">
 		</form>

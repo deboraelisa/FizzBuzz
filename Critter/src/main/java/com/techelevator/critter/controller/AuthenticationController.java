@@ -36,7 +36,7 @@ public class AuthenticationController {
 		if(userDAO.searchForUsernameAndPassword(userName, password)) {
 			model.put("currentUser", userName);
 			if(destination != null) {
-				return "redirect:" + destination;
+				return "redirect:/" + destination;
 			} else {
 				return "redirect:/users/"+userName;
 			}

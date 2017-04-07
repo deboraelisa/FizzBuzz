@@ -43,6 +43,10 @@ public class AuthorizationFilter implements Filter {
 			throws IOException {
 		
 		String originalRequest = httpRequest.getRequestURL().toString();
+		int index = originalRequest.indexOf("critter-app");
+		index += "critter-app/".length();
+		originalRequest = originalRequest.substring(index);
+		
 		String queryString = httpRequest.getQueryString();
 		if(queryString != null) {
 			originalRequest = originalRequest + "?" + queryString;
